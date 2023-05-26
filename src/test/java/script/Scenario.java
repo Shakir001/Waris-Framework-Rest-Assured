@@ -43,10 +43,9 @@ public class Scenario extends BaseAPIClass{
 		Assert.assertEquals(expData, actData);
 		
 		given()
-		.pathParam("id", actData)
+		.pathParam("id", actData);
 		
-		.when()
-		.get();
+		
 		
 		
 		

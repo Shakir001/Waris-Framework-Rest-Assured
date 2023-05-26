@@ -24,15 +24,15 @@ public class Create {
 		
 		Response response = req.post("https://reqres.in/api/users");
 		
-		int res = response.statusCode();
-		System.out.println(response.contentType());
-		System.out.println(response.prettyPrint());
-		System.out.println(response.print());
+		String contentType = response.header("Content-Type");
 		
-		Assert.assertEquals(201, res);
+		Assert.assertEquals(contentType, "application/json");
 		
-		
-		
+//		int res = response.statusCode();
+//		System.out.println(response.contentType());
+//		System.out.println(response.prettyPrint());
+//		System.out.println(response.print());
+//		
+//		Assert.assertEquals(201, res);
 	}
-
 }

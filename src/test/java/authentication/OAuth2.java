@@ -41,6 +41,5 @@ public class OAuth2 {
 		.time(Matchers.lessThan(1000l), TimeUnit.MILLISECONDS)
 		.log().all();
 		
-
 	}
 }

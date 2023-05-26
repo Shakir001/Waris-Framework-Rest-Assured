@@ -33,7 +33,7 @@ public class UsingBasicAuth {
 		.log().all();
 	}
 	
-	//Second way if we login each and every time
+	//Second way if we login is needed each and every time
 	@Test
 	public void digest() {
 		

@@ -2,24 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-19T15:46:14 IST" name="Default suite" finished-at="2023-05-19T15:46:16 IST" duration-ms="2089">
+  <suite started-at="2023-05-24T23:47:18 IST" name="Default suite" finished-at="2023-05-24T23:47:18 IST" duration-ms="66">
     <groups>
     </groups>
-    <test started-at="2023-05-19T15:46:14 IST" name="Default test" finished-at="2023-05-19T15:46:16 IST" duration-ms="2089">
-      <class name="script.EndToEndScenario">
-        <test-method is-config="true" signature="suiteConfig()[pri:0, instance:script.EndToEndScenario@543588e6]" started-at="2023-05-19T15:46:13 IST" name="suiteConfig" finished-at="2023-05-19T15:46:14 IST" duration-ms="1293" status="PASS">
+    <test started-at="2023-05-24T23:47:18 IST" name="Default test" finished-at="2023-05-24T23:47:18 IST" duration-ms="66">
+      <class name="Shoppersstack">
+        <test-method signature="demo()[pri:0, instance:Shoppersstack@15aab8c6]" started-at="2023-05-24T23:47:18 IST" name="demo" finished-at="2023-05-24T23:47:18 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- suiteConfig -->
-        <test-method signature="scenario()[pri:0, instance:script.EndToEndScenario@543588e6]" started-at="2023-05-19T15:46:14 IST" name="scenario" finished-at="2023-05-19T15:46:16 IST" duration-ms="2044" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scenario -->
-        <test-method is-config="true" signature="asCofig()[pri:0, instance:script.EndToEndScenario@543588e6]" started-at="2023-05-19T15:46:16 IST" name="asCofig" finished-at="2023-05-19T15:46:17 IST" duration-ms="74" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- asCofig -->
-      </class> <!-- script.EndToEndScenario -->
+        </test-method> <!-- demo -->
+      </class> <!-- Shoppersstack -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

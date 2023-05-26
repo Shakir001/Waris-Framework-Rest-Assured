@@ -9,7 +9,6 @@ public class SetUsernameAndPassword {
 	@Test
 	public void demo() {
 		
-
 		int [] s = {10,5,9,6,6,9,14,1};
 		HashMap map = new HashMap<>();
 		for(int i=0;i<s.length;i++) {
@@ -24,8 +23,6 @@ public class SetUsernameAndPassword {
 			}
 		}
 		System.out.println(map);
-		
-		
 	}
 }
 		
