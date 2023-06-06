@@ -8,7 +8,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import pojoClass.Customer;
+import pojoClass.CreateProject;
 
 import static io.restassured.RestAssured.*;
 
@@ -20,7 +20,7 @@ public class RequestAndResponseBuilder {
 	@Test
 	public void demo() {
 		
-		Customer c = new Customer("Sunil", "pen", "start", 11);
+		CreateProject c = new CreateProject("Sunil", "pen", "start", 11);
 		
 		 RequestSpecification req = new RequestSpecBuilder()
 				 .setBaseUri("http://rmgtestingserver:8084")

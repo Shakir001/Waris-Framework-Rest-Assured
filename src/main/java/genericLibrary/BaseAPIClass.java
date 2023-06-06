@@ -49,17 +49,29 @@ public class BaseAPIClass {
 		req = new RequestSpecBuilder().setBaseUri(IconstantPath.baseUri).setContentType(ContentType.JSON).build();
 		resp = new ResponseSpecBuilder().expectContentType(ContentType.JSON).expectStatusCode(StatusCodeLibrary.post).expectResponseTime(Matchers.lessThan(1000l), TimeUnit.MILLISECONDS).build();
 		
+		
+		
+	}
+	
+	@BeforeMethod
+	public void methodCon() {
+		driver = web.launchBrowser(pLib.fetchDataFromPropertyFile("browser"));
 		createp= new CreateProjectPage(driver);
 		home= new HomePage(driver);
 		login= new LoginPage(driver);
 		project= new ProjectPage(driver);
-       
 	}
+	
+	@AfterMethod
+	public void AfterMethodCon() {
+		web.closeBrowsr();
+	}
+	
 	
 	@AfterSuite
 	public void asCofig() {
 		dLib.closeDB();
 		
+	
 	}
-
 }

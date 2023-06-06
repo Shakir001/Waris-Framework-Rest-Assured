@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Shoppersstack">
+      <class name="script.Scenario">
         <methods>
-          <include name="demo"/>
+          <include name="methodCon"/>
+          <include name="AfterMethodCon"/>
+          <include name="asCofig"/>
+          <include name="suiteConfig"/>
+          <include name="general"/>
         </methods>
-      </class> <!-- Shoppersstack -->
+      </class> <!-- script.Scenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

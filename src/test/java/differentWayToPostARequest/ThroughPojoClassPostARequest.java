@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import pojoClass.Customer;
+import pojoClass.CreateProject;
 
 public class ThroughPojoClassPostARequest {
 	
@@ -19,7 +19,7 @@ public class ThroughPojoClassPostARequest {
 		
 		baseURI = "http://rmgtestingserver";
 		port = 8084;
-		Customer cu = new Customer("sunil kumar", "Cricket", "done", 10);
+		CreateProject cu = new CreateProject("sunil kumar", "Cricket", "done", 10);
 		
 		given()
 		.body(cu)

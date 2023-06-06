@@ -1,6 +1,6 @@
-package pojoClass1;
+package pojoClass;
 
-public class Worker {
+public class CreateProject {
 	
 	
 	String createdBy;
@@ -8,7 +8,7 @@ public class Worker {
 	String status;
 	int teamSize;
 	
-	public Worker(String createdBy, String projectName, String status, int teamSize ) {
+	public CreateProject(String createdBy, String projectName, String status, int teamSize) {
 		this.createdBy=createdBy;
 		this.projectName=projectName;
 		this.status=status;
@@ -30,5 +30,6 @@ public class Worker {
 	public int getTeamSize() {
 		return teamSize;
 	}
+	
 
 }

@@ -1,7 +1,10 @@
 package script;
 
+import static io.restassured.RestAssured.*;
+
 import java.util.concurrent.TimeUnit;
 
+import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,59 +14,53 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import genericLibrary.BaseAPIClass;
-import genericLibrary.EndPointLibrary;
 import genericLibrary.IconstantPath;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.http.ContentType;
 
+public class ScriptTest3 extends BaseAPIClass {
 
-import static io.restassured.RestAssured.*;
-
-public class Scenario extends BaseAPIClass{
-	
 	@Test
 	public void general() {
-		
-		
-		
-		login.loginToApp(pLib.fetchDataFromPropertyFile("username"), pLib.fetchDataFromPropertyFile("password"));
-		
+
+	
+		login.loginToApplication(pLib.fetchDataFromPropertyFile("username"), pLib.fetchDataFromPropertyFile("password"));
+
 		home.clickProjectModuel();
-		
+
 		project.clickCreateButton();
-		
-		createp.createProject(web, pLib.fetchDataFromPropertyFile("projectName")+jLib.getRandom(), pLib.fetchDataFromPropertyFile("createdBy"), 1);
-		
-		
+
+		createp.createProject(web, pLib.fetchDataFromPropertyFile("projectName") + jLib.getRandom(),
+				pLib.fetchDataFromPropertyFile("createdBy"), 1);
+
 		String query = "select * from project";
-		
+
 		String expData = project.getProjectId(driver);
-		
+
 		String actData = dLib.readDataFromDatabaseAndValidate(query, 1, expData);
-		
+
 		Assert.assertEquals(expData, actData);
+
+		given().pathParam("id", actData)
 		
-		given()
-		.pathParam("id", actData);
-		
-		
-		
-		
-		
-		
+		.when().get("http://rmgtestingserver:8084/projects/{id}")
+		.then()
+		.assertThat().statusCode(200).contentType(ContentType.JSON).time(Matchers.lessThan(1000l), TimeUnit.MILLISECONDS)
+		.log().all();
 		
 		
+
 	}
 }
-		
-		
+
 //		WebDriverManager.chromedriver().setup();
 //		WebDriver driver = new ChromeDriver();
 //		driver.get(IconstantPath.baseUri);
 //		driver.manage().window().maximize();
 //		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //
-//		driver.findElement(By.id("usernmae")).sendKeys(IconstantPath.rmg_id);
-//		driver.findElement(By.id("inputPassword")).sendKeys(IconstantPath.rmg_password);
+//		driver.findElement(By.id("usernmae")).sendKeys(pLib.fetchDataFromPropertyFile("username"));
+//		driver.findElement(By.id("inputPassword")).sendKeys(pLib.fetchDataFromPropertyFile("password"));
 //		driver.findElement(By.xpath("//button[.='Sign in']")).click();
 //
 //		driver.findElement(By.xpath("//a[.='Projects']")).click();
@@ -101,8 +98,6 @@ public class Scenario extends BaseAPIClass{
 //		.then()
 //		.assertThat()
 //		.log().all();
-		
-		
-		
-	
-
+//		
+//	}
+//}

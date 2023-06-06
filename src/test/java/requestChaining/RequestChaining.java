@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import genericLibrary.JavaLibrary;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import pojoClass1.Worker;
+import pojoClass.CreateProject;
 
 import static io.restassured.RestAssured.*;
 
@@ -23,7 +23,7 @@ public class RequestChaining {
 		baseURI = "http://rmgtestingserver";
 		port = 8084;
 
-		Worker w = new Worker("mohit kumar", "java course"+ran.getRandom(), "going", 10);
+		CreateProject w = new CreateProject("mohit kumar", "java course"+ran.getRandom(), "going", 10);
 
 		Response res = given()
 		.body(w)

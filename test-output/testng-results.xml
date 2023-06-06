@@ -2,16 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-24T23:47:18 IST" name="Default suite" finished-at="2023-05-24T23:47:18 IST" duration-ms="66">
+  <suite started-at="2023-06-06T09:53:34 IST" name="Default suite" finished-at="2023-06-06T09:53:51 IST" duration-ms="17026">
     <groups>
     </groups>
-    <test started-at="2023-05-24T23:47:18 IST" name="Default test" finished-at="2023-05-24T23:47:18 IST" duration-ms="66">
-      <class name="Shoppersstack">
-        <test-method signature="demo()[pri:0, instance:Shoppersstack@15aab8c6]" started-at="2023-05-24T23:47:18 IST" name="demo" finished-at="2023-05-24T23:47:18 IST" duration-ms="10" status="PASS">
+    <test started-at="2023-06-06T09:53:34 IST" name="Default test" finished-at="2023-06-06T09:53:51 IST" duration-ms="17026">
+      <class name="script.ThreeLayerValidation">
+        <test-method is-config="true" signature="suiteConfig()[pri:0, instance:script.ThreeLayerValidation@52af26ee]" started-at="2023-06-06T09:53:33 IST" name="suiteConfig" finished-at="2023-06-06T09:53:34 IST" duration-ms="1404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteConfig -->
+        <test-method is-config="true" signature="methodCon()[pri:0, instance:script.ThreeLayerValidation@52af26ee]" started-at="2023-06-06T09:53:34 IST" name="methodCon" finished-at="2023-06-06T09:53:36 IST" duration-ms="2319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodCon -->
+        <test-method signature="demo()[pri:0, instance:script.ThreeLayerValidation@52af26ee]" started-at="2023-06-06T09:53:36 IST" name="demo" finished-at="2023-06-06T09:53:51 IST" duration-ms="14573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- demo -->
-      </class> <!-- Shoppersstack -->
+        <test-method is-config="true" signature="AfterMethodCon()[pri:0, instance:script.ThreeLayerValidation@52af26ee]" started-at="2023-06-06T09:53:51 IST" name="AfterMethodCon" finished-at="2023-06-06T09:53:51 IST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethodCon -->
+        <test-method is-config="true" signature="asCofig()[pri:0, instance:script.ThreeLayerValidation@52af26ee]" started-at="2023-06-06T09:53:51 IST" name="asCofig" finished-at="2023-06-06T09:53:51 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- asCofig -->
+      </class> <!-- script.ThreeLayerValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

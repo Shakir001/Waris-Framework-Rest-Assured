@@ -2,20 +2,22 @@ package script;
 
 import static io.restassured.RestAssured.given;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import genericLibrary.BaseAPIClass;
 import genericLibrary.EndPointLibrary;
 import io.restassured.response.Response;
-import pojoClassForEndToEndScenario.CreateProject;
+import pojoClass.CreateProject;
 
-public class EndToEndScenario extends BaseAPIClass {
+public class ScriptTest extends BaseAPIClass {
 
 	@Test
 	public void scenario() {
 
-		CreateProject cus = new CreateProject("mohan", "laptop" + jLib.getRandom(), "on going", 10);
+		String ProjectName = "laptop" + jLib.getRandom();
+		CreateProject cus = new CreateProject("mohan", ProjectName, "on going", 10);
 
 		Response res = given().spec(req).body(cus).when().post(EndPointLibrary.createProject);
 
@@ -25,8 +27,14 @@ public class EndToEndScenario extends BaseAPIClass {
 
 		Assert.assertEquals(projectId, exp);
 
-		res.then().spec(resp).log().all();
+		login.loginToApplication(pLib.fetchDataFromPropertyFile("username"),
+				pLib.fetchDataFromPropertyFile("password"));
 
+		home.clickProjectModuel();
+
+		String act = driver.findElement(By.xpath("//td[.='" + ProjectName + "']/preceding-sibling::td")).getText();
+
+		Assert.assertEquals(act, exp);
 	}
 
 }

@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Scenario1 extends BaseAPIClass{
+public class ScriptTest1 extends BaseAPIClass{
 	
 	
 	@Test

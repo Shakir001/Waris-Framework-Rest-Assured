@@ -18,9 +18,9 @@ import genericLibrary.EndPointLibrary;
 import genericLibrary.IconstantPath;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.response.Response;
-import pojoClassForEndToEndScenario.CreateProject;
+import pojoClass.CreateProject;
 
-public class ThreeLayerValidation extends BaseAPIClass {
+public class ScriptTest2 extends BaseAPIClass {
 
 	@Test
 	public void demo() {
