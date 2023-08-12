@@ -27,6 +27,7 @@ public class OAuth2 {
 		.post("/token");
 		
 		String token = res.jsonPath().getString("access_token");
+		System.out.println(token);
 		
 		given()
 		.auth().oauth2(token)
